@@ -5,15 +5,16 @@
 }
 
 <h1>Crear un tipo de cuenta</h1>
-<h5>Un tipo de cuenta se refiere a cómo podemos agrupar cuentas.
+<p>Un tipo de cuenta se refiere a cómo podemos agrupar cuentas.
     Ejemplos: Préstamos, tarjetas de crédito, etc.
-</h5>
+</p>
 
 <div asp-validation-summary="All" class="text-danger"></div>
 <form asp-action="Crear">
     <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" id="nombre" name="nombre" class="form-control"/>
+        <input type="text" asp-for="nombre" class="form-control"/>
+        <span asp-validation-for=""></span>
     </div>
     <button type="submit" class="btn btn-primary">Crear</button>
 </form>
