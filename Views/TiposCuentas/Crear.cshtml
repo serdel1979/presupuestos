@@ -13,8 +13,27 @@
 <form asp-action="Crear">
     <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" asp-for="nombre" class="form-control"/>
-        <span asp-validation-for=""></span>
+        <input type="text" asp-for="Nombre" class="form-control"/>
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+        <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" asp-for="Email" class="form-control"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+        <div class="mb-3">
+        <label for="URL" class="form-label">Url</label>
+        <input type="text" asp-for="URL" class="form-control"/>
+        <span asp-validation-for="URL" class="text-danger"></span>
+    </div>
+        <div class="mb-3">
+        <label for="TarjetaDeCredito" class="form-label">Número de Tarjeta</label>
+        <input type="text" asp-for="TarjetaDeCredito" class="form-control"/>
+        <span asp-validation-for="TarjetaDeCredito" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Crear</button>
 </form>
+
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
